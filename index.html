@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KT's Rentals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+    .navbar-brand img { height: 40px; margin-right: 8px; }
+
+    /* Hero */
+    .hero {
+      background: url('assets/images/hero-car.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.65);
+      padding: 40px 20px;
+      border-radius: 12px;
+      width: 95%;
+      max-width: 900px;
+    }
+    .search-box {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Cards */
+    .section-title {
+      text-align: center;
+      margin: 50px 0 30px 0;
+      font-weight: bold;
+    }
+    .car-card img {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .car-card { border-radius: 12px; overflow: hidden; }
+
+    /* Footer */
+    footer { background: #4b0082; color: white; padding: 40px 0; }
+    footer a { color: #f8f9fa; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero { height: auto; padding: 60px 20px; }
+      .hero-overlay { padding: 25px; }
+      .search-box .row > div { margin-bottom: 10px; }
+      .car-card img { height: 160px; }
+    }
+
+    @media (max-width: 576px) {
+      #cars .card-img-top {
+        height: 150px;
+      }
+      #cars .col-6 {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4b0082;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="KT's Rentals Logo">
+        <span class="fw-bold">KT's Rentals</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cars">Cars</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1 class="display-5 fw-bold">Rent a Car in Just a Few Clicks 🚗</h1>
+      <p class="lead">Affordable • Reliable • Hassle-free</p>
+
+      <div class="container mt-4">
+        <div class="search-box">
+          <form action="#" method="GET" class="row g-2">
+            <div class="col-md-3 col-12">
+              <input type="text" class="form-control" placeholder="Pickup Location">
+            </div>
+            <div class="col-md-3 col-6">
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-md-3 col-6">
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-md-2 col-8">
+              <select class="form-select">
+                <option value="">Any</option>
+                <option>SUV</option><option>Sedan</option><option>Luxury</option><option>Economy</option>
+              </select>
+            </div>
+            <div class="col-md-1 col-4 d-grid">
+              <button type="button" class="btn btn-light" style="background-color:#4b0082; color:white;">Go</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="container my-5" id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-3 col-6 text-center">
+        <div class="p-3 shadow rounded h-100">
+          <div class="fs-2">🚘</div>
+          <h6>Self-Drive & Chauffeur</h6>
+          <p class="small">Drive yourself or hire a pro driver.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 text-center">
+        <div class="p-3 shadow rounded h-100">
+          <div class="fs-2">✈️</div>
+          <h6>Airport Pickup</h6>
+          <p class="small">Pickup & drop-off to all airports.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 text-center">
+        <div class="p-3 shadow rounded h-100">
+          <div class="fs-2">📞</div>
+          <h6>24/7 Support</h6>
+          <p class="small">Always here to assist you.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 text-center">
+        <div class="p-3 shadow rounded h-100">
+          <div class="fs-2">💸</div>
+          <h6>Affordable Rentals</h6>
+          <p class="small">Daily, weekly, & long-term deals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cars -->
+  <section class="container my-5" id="cars">
+    <h2 class="section-title">Featured Cars</h2>
+    <div class="row g-3">
+      <!-- Example Static Car Card -->
+      <div class="col-lg-4 col-md-6 col-6 d-flex">
+        <div class="card car-card shadow-sm w-100">
+          <img src="rav4.jpg" class="card-img-top" alt="Toyota Corolla">
+          <div class="card-body">
+            <h5 class="card-title">Toyota RAV4</h5>
+            <p class="card-text small">2022 • 5 Seats • Automatic<br><strong>$50 / day</strong></p>
+            <a href="rav4 book.html" class="btn btn-primary w-100" style="background-color:#4b0082; border:none;">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-6 d-flex">
+        <div class="card car-card shadow-sm w-100">
+          <img src="bmw.jpg" class="card-img-top" alt="Hyundai Tucson">
+          <div class="card-body">
+            <h5 class="card-title">BMW M5 Series</h5>
+            <p class="card-text small">2021 • 5 Seats • Automatic<br><strong>$70 / day</strong></p>
+            <a href="bmw book.html" class="btn btn-primary w-100" style="background-color:#4b0082; border:none;">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="cars.html" class="btn btn-outline-dark btn-lg">View All Cars</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="container my-5" id="about">
+    <div class="row align-items-center g-4">
+      <div class="col-md-6">
+        <img src="assets/images/about.jpg" class="img-fluid rounded shadow" alt="About KT's Rentals">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold">About KT’s Rentals</h2>
+        <p>KT’s Rentals is your trusted car rental partner in Ghana, providing affordable, reliable, and well-maintained cars for self-drive and chauffeur services. From airport pickups to long-term rentals, we make your journey smooth and stress-free.</p>
+        <ul>
+          <li>✔ Wide range of cars</li>
+          <li>✔ Affordable pricing</li>
+          <li>✔ Easy booking process</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">What Our Customers Say</h2>
+    <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card mx-auto shadow p-4" style="max-width: 600px;">
+            <h5 class="mb-1">John Doe</h5>
+            <p class="text-muted small">July 15, 2024</p>
+            <p class="mb-2">⭐⭐⭐⭐⭐</p>
+            <p>"Amazing service and clean cars. Highly recommended!"</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card mx-auto shadow p-4" style="max-width: 600px;">
+            <h5 class="mb-1">Sarah Williams</h5>
+            <p class="text-muted small">June 30, 2024</p>
+            <p class="mb-2">⭐⭐⭐⭐</p>
+            <p>"Great prices and excellent customer support."</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section class="bg-light py-5" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button class="btn w-100" style="background-color:#4b0082; color:white;">Send Message</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h5>📍 Location</h5>
+          <p>Accra, Ghana</p>
+          <h5>📞 Phone</h5>
+          <p>+233 123 456 789</p>
+          <h5>✉️ Email</h5>
+          <p>info@ktsrentals.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2025 KT's Rentals. All Rights Reserved.</p>
+      <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
